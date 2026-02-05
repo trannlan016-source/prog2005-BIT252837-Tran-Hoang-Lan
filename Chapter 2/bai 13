@@ -1,0 +1,6 @@
+while True:
+    mk = input("Nhập mật khẩu: ")
+    if mk == "python123":
+        print("Đăng nhập thành công!")
+    else:
+        print("Sai mật khẩu, vui lòng thử lại.")
