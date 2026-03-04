@@ -1,0 +1,9 @@
+colors = ["Red", "Blue", "Green", "Yellow", "Black"]
+
+try:
+    colors.remove("Green")
+    print("Deleted Green.")
+except ValueError:
+    print("Error: khong co mau xanh trong list.")
+
+print(f"list: {colors}")
