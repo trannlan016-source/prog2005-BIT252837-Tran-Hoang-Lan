@@ -1,0 +1,11 @@
+nums = [int(x) for x in input("Nhap danh sach so: ").split()]
+found = False
+
+for n in nums:
+    if n > 10:
+        print(f"so dau tien lon hon 10 la: {n}")
+        found = True
+        break
+
+if not found:
+    print("khong co so nao lon hon 10.")
