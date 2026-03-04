@@ -1,0 +1,19 @@
+def nhap_ma_tran(ten):
+    r = int(input(f"M {ten}: "))
+    c = int(input(f"N {ten}: "))
+    matrix = []
+    for i in range(r):
+        row = [int(x) for x in input(f"M {i+1}: ").split()]
+        matrix.append(row)
+    return matrix
+
+A = nhap_ma_tran("Matrix A")
+B = nhap_ma_tran("Matraix B")
+
+if len(A) == len(B) and len(A[0]) == len(B[0]):
+    result = [[A[i][j] + B[i][j] for j in range(len(A[0]))] for i in range(len(A))]
+    print("ket qua cong hai ma tran:")
+    for row in result:
+        print(row)
+else:
+    print("hai ma tran khong cung kich thuoc!")
