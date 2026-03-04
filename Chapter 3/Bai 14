@@ -1,0 +1,13 @@
+def count_vowels(s):
+    vowels = "aeiou"
+    count = 0
+
+    s = s.lower()
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+text = input("Nhap chuoi can dem nguyen am: ")
+result = count_vowels(text)
+print(f"So luong nguyen am trong chuoi la: {result}")
