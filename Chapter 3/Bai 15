@@ -1,0 +1,11 @@
+original_str = input("Nhap chuoi muon dao nguoc: ")
+
+reversed_slicing = original_str[::-1]
+print(f"Cach 1 (Slicing): {reversed_slicing}")
+
+reversed_loop = ""
+for char in original_str:
+    
+    reversed_loop = char + reversed_loop
+
+print(f"Cach 2 (vong lap)): {reversed_loop}")
