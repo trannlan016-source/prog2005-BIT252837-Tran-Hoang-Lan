@@ -1,0 +1,12 @@
+nums = [int(x) for x in input("danh sach so nguyen: ").split()]
+swaps = 0
+n = len(nums)
+
+for i in range(n):
+    for j in range(0, n - i - 1):
+        if nums[j] > nums[j + 1]:
+            nums[j], nums[j + 1] = nums[j + 1], nums[j]
+            swaps += 1
+
+print(f"danh sach tang dan: {nums}")
+print(f"tong so lan hoan doi: {swaps}")
