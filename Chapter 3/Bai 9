@@ -1,0 +1,9 @@
+nums = [int(x) for x in input("nhap danh sach so: ").split()]
+
+odd_numbers = [n for n in nums if n % 2 != 0]
+even_numbers = [n for n in nums if n % 2 == 0]
+sum_even = sum(even_numbers)
+
+print(f"so le: {odd_numbers}")
+print(f"so chan: {even_numbers}")
+print(f"tong so chan: {sum_even}")
