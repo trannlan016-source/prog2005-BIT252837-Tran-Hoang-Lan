@@ -1,0 +1,5 @@
+s = input("Nhap chuoi an kiem tra: ").lower().replace(" ", "")
+if s == s[::-1]:
+    print("day la chuoi doi xung.")
+else:
+    print("khong phai chuoi doi xung.")
