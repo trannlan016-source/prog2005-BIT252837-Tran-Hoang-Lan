@@ -1,0 +1,10 @@
+data = [float(x) for x in input("nhap day so thuc (cach nhau boi nut cach): ").split()]
+
+for i in range(1, len(data)):
+    key = data[i]
+    j = i - 1
+    while j >= 0 and key > data[j]:
+        data[j + 1] = data[j]
+        j -= 1
+    data[j + 1] = key
+print(f"sau khi sap xep giam dan: {data}")
