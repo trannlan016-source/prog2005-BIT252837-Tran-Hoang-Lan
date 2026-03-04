@@ -1,0 +1,5 @@
+subjects = ["co so lap trinh", "dai so tuyen tinh", "tieng anh", "giao duc the chat co ban"]
+print(f"so luong hoc phan: {len(subjects)}")
+
+for s in subjects:
+    print(s)
