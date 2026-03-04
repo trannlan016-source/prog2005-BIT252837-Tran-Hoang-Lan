@@ -1,0 +1,9 @@
+friends = ["duc", "tuyen", "duong"]
+print(f"danh sach ban dau: {friends}")
+
+friends.append("linh")
+print(f"sau khi append: {friends}")
+
+removed_friend = friends.pop(1)
+print(f"deleted: {removed_friend}")
+print(f"danh sach cuoi cung: {friends}")
