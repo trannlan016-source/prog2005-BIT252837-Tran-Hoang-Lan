@@ -1,0 +1,13 @@
+nums = [int(x) for x in input("nhap danh sach so: ").split()]
+target = int(input("Nhap so can tim: "))
+found_index = -1
+
+for i in range(len(nums)):
+    if nums[i] == target:
+        found_index = i
+        break
+
+if found_index != -1:
+    print(f"So {target} nam o chi so (index): {found_index}")
+else:
+    print("Khong tim thay so nay.")
