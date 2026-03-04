@@ -1,0 +1,10 @@
+numbers = [5, 6, 2, 0, 0, 7]
+
+numbers.sort()
+print(f"sap xep tang dan: {numbers}")
+
+numbers.reverse()
+print(f"sau khi dao nguoc: {numbers}")
+
+count_5 = numbers.count(5)
+print(f"so lan xuat hien cua so 5: {count_5}")
