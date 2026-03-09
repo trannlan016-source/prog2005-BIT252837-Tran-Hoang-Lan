@@ -1,0 +1,3 @@
+a = input("he so a :")
+b = input("he so b:")
+c = input("he so c:")
