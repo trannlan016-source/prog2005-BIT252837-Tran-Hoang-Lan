@@ -1,3 +1,9 @@
 a = input("he so a :")
 b = input("he so b:")
 c = input("he so c:")
+
+so_lon_nhat = max(a, b, c)
+so_nho_nhat = min(a, b, c)
+
+print(f"Số lớn nhất là: {so_lon_nhat}")
+print(f"Số nhỏ nhất là: {so_nho_nhat}")
