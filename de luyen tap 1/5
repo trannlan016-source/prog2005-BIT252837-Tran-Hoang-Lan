@@ -1,0 +1,20 @@
+import random
+
+m = int(input("Nhap so hang M: "))
+n = int(input("Nhap so cot N: "))
+
+matrix = [[random.randint(1, 100) for _ in range(n)] for _ in range(m)]
+
+print("Ma tran:")
+for row in matrix:
+    print(row)
+
+r_idx = int(input(f"Nhap hang muon xem (0-{m-1}): "))
+print(f"Hang {r_idx}: {matrix[r_idx]}")
+
+c_idx = int(input(f"Nhap cot muon xem (0-{n-1}): "))
+col_data = [matrix[i][c_idx] for i in range(m)]
+print(f"Cot {c_idx}: {col_data}")
+
+max_val = max(max(row) for row in matrix)
+print(f"Gia tri lon nhat: {max_val}")
