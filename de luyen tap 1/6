@@ -1,0 +1,15 @@
+def la_so_nguyen_to(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+s = "5; 7; 8; -2; 8; 11; 13; 9; 10"
+numbers = [int(x.strip()) for x in s.split(';')]
+
+chan = [x for x in numbers if x % 2 == 0]
+am = [x for x in numbers if x < 0]
+snt = [x for x in numbers if la_so_nguyen_to(x)]
+
+print(f"So chan: {len(chan)}, So am: {len(am)}, So NT: {len(snt)}")
+print(f"Trung binh: {sum(numbers)/len(numbers):.2f}")
