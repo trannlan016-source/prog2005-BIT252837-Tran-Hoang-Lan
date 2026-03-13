@@ -1,0 +1,10 @@
+import math
+
+a = float(input("Nhap so thu nhat: "))
+b = float(input("Nhap so thu hai: "))
+
+print(f"Luy thua {a}^{b}: {a ** b}")
+print(f"Can bac 2 cua {a}: {math.sqrt(a)}")
+print(f"Chia lay phan nguyen: {a // b}")
+print(f"Chia lay phan du: {a % b}")
+print(f"Lam tron so {a}: {round(a)}")
