@@ -1,0 +1,11 @@
+class Student:
+    def __init__(self, ten, diem):
+        self.ten = ten
+        self.diem = diem
+
+    def display(self):
+        
+        print(f"Sinh vien {self.ten} co diem la {self.diem}")
+
+sv3 = Student("Du", 10)
+sv3.display()
