@@ -1,0 +1,7 @@
+n = int(input("Nhap mot so tu 1 den 9: "))
+if 1 <= n <= 9:
+    print(f"Bang cuu chuong {n}:")
+    for i in range(1, 10):
+        print(f"{n} x {i} = {n * i}")
+else:
+    print("So nhap vao khong hop le.")
