@@ -1,0 +1,9 @@
+class Student:
+    def __init__(self, ten, diem):
+        self.ten = ten
+        self.diem = diem
+
+sv1 = Student("Anh", 8)
+sv2 = Student("Bi", 9)
+
+print(f"SV1: {sv1.ten}, SV2: {sv2.ten}")
