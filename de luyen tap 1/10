@@ -1,0 +1,22 @@
+def add_product():
+    code = input("Ma SP: ")
+    name = input("Ten SP: ")
+    price = input("Gia: ")
+    with open("products.txt", "a") as f:
+        f.write(f"{code};{name};{price}\n")
+
+
+def show_products():
+    products = []
+    with open("products.txt", "r") as f:
+        for line in f:
+            p = line.strip().split(';')
+            products.append({'code': p[0], 'name': p[1], 'price': float(p[2])})
+
+    sorted_p = sorted(products, key=lambda x: x['price'], reverse=True)
+    for p in sorted_p:
+        print(f"{p['code']} - {p['name']} - {p['price']}")
+
+
+add_product()
+show_products()
