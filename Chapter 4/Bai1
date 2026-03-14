@@ -1,0 +1,17 @@
+def thong_ke_so_nguyen(danh_sach_so):
+
+    if not danh_sach_so:
+        return 0, None, None
+
+    tong = sum(danh_sach_so)
+    lon_nhat = max(danh_sach_so)
+    nho_nhat = min(danh_sach_so)
+
+    return tong, lon_nhat, nho_nhat
+
+my_tuple = (18, 22, 36, 44, 67)
+tong, max_val, min_val = thong_ke_so_nguyen(my_tuple)
+
+print(f"Tong: {tong}")
+print(f"Gia tri lon nhat: {max_val}")
+print(f"Gia tri nho nhat: {min_val}")
