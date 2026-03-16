@@ -1,0 +1,11 @@
+class SinhVien:
+    def __init__(self, ten, diem):
+        self.ten = ten
+        self.diem = diem
+
+    def __eq__(self, other):
+        return self.diem == other.diem
+
+sv1 = SinhVien("linh", 8)
+sv2 = SinhVien("lan", 8)
+print(f"Diem bang nhau: {sv1 == sv2}")
