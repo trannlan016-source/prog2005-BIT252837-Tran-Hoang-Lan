@@ -1,0 +1,31 @@
+class Product:
+    def __init__(self, price):
+
+        self.price = price
+
+    @property
+    def price(self):
+
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        if value > 0:
+            self._price = value
+        else:
+            print("Loi: Gia san pham phai lon hon 0!")
+
+            if not hasattr(self, '_price'):
+                self._price = 0
+    def __str__(self):
+
+        return f"Product Price: {self._price}"
+
+p1 = Product(150.5)
+
+print(p1)
+
+print("Dang thu cap nhat gia bang -50...")
+p1.price = -50
+
+print(f"Gia hien tai sau khi thu sai: {p1.price}")
