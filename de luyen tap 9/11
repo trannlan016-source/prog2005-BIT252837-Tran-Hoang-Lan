@@ -1,0 +1,14 @@
+class SinhVien:
+    count = 0
+
+    def __init__(self, ten):
+        self.ten = ten
+        SinhVien.count += 1
+
+    @classmethod
+    def show_count(cls):
+        print(f" sinh vien hien tai: {cls.count}")
+
+s1 = SinhVien("nguyen van chin")
+s2 = SinhVien("nguyen van muoi")
+SinhVien.show_count()
