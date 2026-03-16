@@ -1,0 +1,17 @@
+class User:
+    def __init__(self, user_id):
+        self._id = user_id
+    @property
+    def id(self):
+
+        return self._id
+
+user1 = User(1002022)
+
+print(f"ID cua nguoi dung: {user1.id}")
+
+try:
+    user1.id = 2002
+except AttributeError as e:
+    print(f"Loi: {e}")
+    print("Giai thich: Khong the thay doi thuoc tinh vi thieu ham setter.")
