@@ -1,0 +1,18 @@
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        print("Tieng keu")
+
+class Dog(Animal):
+    def __init__(self, name, giong_loai):
+        super().__init__(name)
+        self.giong_loai = giong_loai
+
+
+    def sound(self):
+        print(f"{self.name} (giong {self.giong_loai}) keu: Gau!")
+
+cho_con = Dog("ki", "cho den thui")
+cho_con.sound()
