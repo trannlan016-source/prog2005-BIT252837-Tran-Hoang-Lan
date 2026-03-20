@@ -1,0 +1,32 @@
+def main():
+    ds_chuoi = []
+    print("nhap 5 chuoi bat ki")
+    for i in range(5):
+        chuoi = input(f'nhap chuoi thu {i+1}')
+        ds_chuoi.append(chuoi)
+    n = len(ds_chuoi)
+    print(f"\nDanh sach ban dau:{ds_chuoi}")
+    print("-" * 30)
+    for i in range(n):
+        da_hoan_doi = False
+        print(f"lan lap chinh thu {i+1}:")
+        for j in range(0, n - i -1):
+          if len(ds_chuoi[j]) < len(ds_chuoi[j + 1]):
+
+            ds_chuoi[j], ds_chuoi[j + 1] = ds_chuoi[j + 1], ds_chuoi[j]
+            da_hoan_doi = True
+            print(f"  -> swap: {ds_chuoi}")
+        else:
+            print(f"  -> ko swap: {ds_chuoi}")
+
+
+        if not da_hoan_doi:
+            print("  (on dinh , dung som)")
+            break
+        print("-" * 20)
+        print("\nket qua cuoi cung (do dai giam dan):")
+        for s in ds_chuoi:
+            print(f"'{s}' - Do dai: {len(s)}")
+
+    if __name__ == "__main__":
+        main()
