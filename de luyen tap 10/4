@@ -1,0 +1,6 @@
+chuoi_nhap = input("nhap vao mot chuoi")
+if not chuoi_nhap:
+    print("error")
+else:
+    do_dai = len(chuoi_nhap)
+    print(f"do dai cua chuoi vua nhap la: {do_dai}")
