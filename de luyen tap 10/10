@@ -1,0 +1,16 @@
+def run_bai_10():
+    print("\n--- Run 10 (Bubble Sort) ---")
+    arr = []
+    for i in range(5):
+        arr.append(input(f"nhap chuoi thu {i + 1}: "))
+
+    n = len(arr)
+    print(f"Danh sach goc: {arr}")
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if len(arr[j]) < len(arr[j + 1]):
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                print(f"   step {i + 1}.{j + 1}: {arr}")
+
+    print(f"ket qua cuoi cung: {arr}")
