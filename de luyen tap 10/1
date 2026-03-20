@@ -1,0 +1,10 @@
+import os
+def get_full_filename(path):
+    return os.path.basename(path)
+def get_song_name(path):
+    full_name = os.path.basename(path)
+    song_name , extension = os.path.splitext(full_name)
+    return song_name
+path = "d:\\music\\Lan cuoi(Di ben em xot xa nguoi oi).mp3"
+print(f'ten tep :{get_full_filename(path)}')
+print(f'ten nhac :{get_song_name(path)}')
