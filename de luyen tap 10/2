@@ -1,0 +1,4 @@
+chuoi =input("nhap chuoi: ")
+ky_tu =input("nhap ky tu: ")
+so_lan = chuoi.count(ky_tu)
+print(f" ky tu {ky_tu} xuat hien {so_lan} trong chuoi.")
