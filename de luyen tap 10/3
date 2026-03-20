@@ -1,0 +1,14 @@
+def tinh_giai_thua(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * tinh_giai_thua(n - 1)
+try:
+    so = int(input("nhap mot so nguyen ko am: "))
+    if so < 0:
+        print('vu long nhap so lon hon hoang bang 0.')
+    else:
+        ket_qua = tinh_giai_thua(so)
+        print(f"giai thua cua {so} la {ket_qua}")
+except ValueError:
+    print("Loi: vui long chi nhap so nguyen")
