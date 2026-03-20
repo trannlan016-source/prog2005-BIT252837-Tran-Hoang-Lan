@@ -1,0 +1,78 @@
+class Vehicle:
+    def __init__(self, brand):
+        self._brand = brand
+    @property
+    def brand(self):
+        return self._brand
+    def __str__(self):
+        return f"Vehicle(Brand: {self._brand})"
+
+class Car(Vehicle):
+    total_cars = 0
+
+    def __init__(self, brand, speed):
+        super().__init__(brand)
+
+        if speed < 0:
+            raise ValueError("Toc do khong the am (Xac thuc cach 1)")
+        self._speed = speed
+        Car.total_cars += 1
+
+    @property
+    def speed(self):
+        return self._speed
+
+
+    @speed.setter
+    def speed(self, value):
+
+        if value > 300:
+            raise ValueError("toc do qua gioi han an toan (xac thuc cach 2)")
+        self._speed = value
+
+
+    def drive(self):
+        return f"Chiec {self._brand} dang chay voi toc do {self._speed} km/h"
+
+
+    @classmethod
+    def get_inventory(cls):
+        return f"Tong so xe kho: {cls.total_cars}"
+
+
+    @staticmethod
+    def is_eco_friendly(engine_type):
+        return engine_type.lower() == "electric"
+
+
+    def __eq__(self, other):
+        if isinstance(other, Car):
+            return self._speed == other._speed and self._brand == other._brand
+        return False
+
+    def __str__(self):
+        return f"Car[Hang={self._brand}, Speed={self._speed}]"
+
+
+def run_bai_9():
+    print("\n--- Demo 9 (OOP) ---")
+    try:
+        c1 = Car("Toyota", 120)
+        c2 = Car("vinfast", 150)
+
+        print(f"1. __str__: {c1}")
+        print(f"2. Instance Method: {c1.drive()}")
+        print(f"3. Class Method: {Car.get_inventory()}")
+        print(f"4. Static Method (Electric?): {Car.is_eco_friendly('Electric')}")
+
+        print(f"5. Getter: Toc do xe 2 la {c2.speed}")
+        c2.speed = 200  # Setter hợp lệ
+        print(f"6. Setter: Toc do moi xe 2 la {c2.speed}")
+
+        c3 = Car("Toyota", 120)
+        print(f"7. Operator Overloading (c1 == c3): {c1 == c3}")
+
+        print("8. Test ValueError cach 2 (Setter > 300):")
+        c1.speed = 500
+    except ValueError as e:
+        print(f"   => error: {e}")
