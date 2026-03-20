@@ -1,0 +1,7 @@
+mat_khau = "co troi moi biet"
+while True:
+    nhap = input("Nhap mat khau: ")
+    if nhap == mat_khau:
+        print("dang nhap thanh cong!")
+        break
+    print("error,try again.")
