@@ -1,0 +1,19 @@
+def la_snt(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+lst = [11, 25, 374, 63, 75, 72]
+lst.append(int(input("Nhap so muon them vao list: ")))
+
+k = int(input("Nhap gia tri k de dem: "))
+print(f"So lan {k} xuat hien: {lst.count(k)}")
+
+tong_snt = sum(n for n in lst if la_snt(n))
+print("Tong cac so nguyen to trong list:", tong_snt)
+
+lst.sort()
+print("List sau khi sap xep:", lst)
+lst.clear()
+print("List sau khi xoa:", lst)
