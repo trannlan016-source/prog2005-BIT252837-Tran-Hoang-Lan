@@ -1,0 +1,6 @@
+data = {"id": 101, "name": "Python", "version": 3.10}
+key_check = input("Nhap key can tim: ")
+if key_check in data:
+    print(f"Key '{key_check}' co ton tai")
+else:
+    print("Khong tim thay key")
