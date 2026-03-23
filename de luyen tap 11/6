@@ -1,0 +1,12 @@
+dict_user = {}
+n = int(input("Nhap so luong nguoi: "))
+
+for i in range(n):
+    ten = input(f"Nhap ten nguoi thu {i+1}: ")
+    tuoi = int(input(f"Nhap tuoi cua {ten}: "))
+    dict_user[ten] = tuoi
+
+print("Danh sach da nhap:", dict_user)
+if dict_user:
+    tb_tuoi = sum(dict_user.values()) / len(dict_user)
+    print("Tuoi trung binh:", tb_tuoi)
