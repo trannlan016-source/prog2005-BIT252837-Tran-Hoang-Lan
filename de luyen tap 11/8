@@ -1,0 +1,5 @@
+sv = ("TRan Hoang Lan", 18, 8.5)
+ten, tuoi, diem = sv
+print("Ten sv:", ten)
+print("Tuoi sv:", tuoi)
+print("Diem TB:", diem)
