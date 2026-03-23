@@ -1,0 +1,4 @@
+nums = [int(x) for x in input("Nhap day so (cach nhau khoang trang): ").split()]
+so_chan = [n for n in nums if n % 2 == 0]
+print("Cac so chan:", so_chan)
+print("Tong so chan:", sum(so_chan))
