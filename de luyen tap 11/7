@@ -1,0 +1,15 @@
+import csv
+
+name = input("Nhap ten nhan vien: ")
+age = input("Nhap tuoi: ")
+id_nv = input("Nhap ID: ")
+
+with open("data.txt", "w") as f:
+    f.write(f"ID: {id_nv}, Ten: {name}, Tuoi: {age}")
+
+with open("data.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["ID", "Ten", "Tuoi"])
+    writer.writerow([id_nv, name, age])
+
+print("Da luu thong tin vao data.txt va data.csv")
