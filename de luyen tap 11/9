@@ -1,0 +1,24 @@
+def tao_ma_tran(ten):
+    r = int(input(f"Nhap so hang  {ten}: "))
+    c = int(input(f"Nhap so cot  {ten}: "))
+    mt = []
+    for i in range(r):
+        line = input(f"Nhap hang {i+1} (cach khoang trang): ").split()
+        if not line:
+            raise ValueError("Loi: Gia tri ko dc rong")          
+        mt.append([int(x) for x in line])
+    return mt
+
+try:
+    mt_a = tao_ma_tran("A")
+    mt_b = tao_ma_tran("B")
+
+    if len(mt_a) != len(mt_b) or len(mt_a[0]) != len(mt_b[0]):
+        print("Loi:  ma tran phai cung kich thuoc")
+    else:
+        res = [[mt_a[i][j] + mt_b[i][j] for j in range(len(mt_a[0]))] for i in range(len(mt_a))]
+        print("Ket qua:")
+        for row in res:
+            print(row)
+except ValueError as e:
+    print(e)
