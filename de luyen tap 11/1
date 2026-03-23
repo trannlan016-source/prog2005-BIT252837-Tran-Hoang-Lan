@@ -1,0 +1,12 @@
+strings = [input("Nhap chuoi thu {}: ".format(i+1)) for i in range(5)]
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i -1
+        while j >= 0 and len(arr[j]) < len(key):
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = key
+        print("step {}: {}".format(i,arr))
+insertion_sort(strings)
+print("danh sach chuoi sau khi sap xep:")
