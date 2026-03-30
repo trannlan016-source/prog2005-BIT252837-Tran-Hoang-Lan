@@ -1,0 +1,18 @@
+class Flower:
+    def __init__(self, color):
+        self._color = color
+
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def color(self, value):
+        self._color = value
+
+my_flower = Flower("Red")
+
+print(f"Mau hien tai: {my_flower.color}")
+
+my_flower.color = "Yellow"
+print(f"Mau sau khi trans: {my_flower.color}")
