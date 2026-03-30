@@ -1,0 +1,4 @@
+s = input("Nhap mot chuoi: ")
+
+print(f"chieu dai cua chuoi la: {len(s)}")
+print(f"Chuoi sau khi viet hoa: {s.upper()}")
