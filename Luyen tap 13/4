@@ -1,0 +1,10 @@
+def tinh_tong_de_quy(n):
+    if n == 1:
+        return 1
+    return n + tinh_tong_de_quy(n - 1)
+
+n = int(input("Nhap n: "))
+if n > 0:
+    print(f"Tong tu 1 den {n} la: {tinh_tong_de_quy(n)}")
+else:
+    print("Vui long nhap n > 0")
