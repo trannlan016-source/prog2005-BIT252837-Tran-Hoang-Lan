@@ -1,0 +1,6 @@
+n = int(input("Nhap so nguyen: "))
+if n < 0:
+    print("error")
+else:
+    remainder = n % 2
+    print(f"phan du {n} khi chia 2 la: {remainder}")
