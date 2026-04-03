@@ -1,0 +1,35 @@
+class Book:
+    def __init__(self, name, price):
+        self._name = name
+        self._price = price
+
+    @property
+    def name(self):
+        return self._name
+    @name.setter
+    def name(self, value):
+        self._name = value
+    @property
+    def price(self):
+        return self._price
+    @price.setter
+    def price(self, value):
+        self._price = value
+
+list_books = [
+    Book("Book 1", 30000),
+    Book("Book 2", 50000),
+    Book("Book 3", 100000)
+]
+
+print(f"gia doi tuong dau tien: {list_books[0].price}")
+
+total_price = sum(b.price for b in list_books)
+
+with open("data_books.txt", "w", encoding="utf-8") as f:
+    for b in list_books:
+        f.write(f"{b.name};{b.price}\n")
+
+    f.write(f"Tong;{total_price}")
+
+print("xuat file data_books.txt thanh cong!")
