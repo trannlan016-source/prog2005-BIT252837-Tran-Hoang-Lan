@@ -1,0 +1,13 @@
+def is_prime(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+arr = list(map(int, input("nhap cac so tu nhien (co dau cach): ").split()))
+
+odd_numbers = [x for x in arr if x % 2 != 0]
+print(f"so le: {odd_numbers} | Tong: {len(odd_numbers)}")
+
+prime_numbers = [x for x in arr if is_prime(x)]
+print(f"so nguyen to: {prime_numbers}")
