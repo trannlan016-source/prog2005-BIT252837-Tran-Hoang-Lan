@@ -1,0 +1,12 @@
+danh_sach = []
+for index in range(5):
+    ten = input(f'danh sach ban dau')
+    danh_sach.append(ten)
+print("\ndanh sach ban dau")
+print(danh_sach)
+if len(danh_sach) >=2 :
+    deleted = danh_sach.pop(1)
+    print(f'\n[thong bao] da sut {deleted} ra chuong ga')
+    print(danh_sach)
+else:
+    print("\ndanh sach ko du nguoi de sut ra chuong ga")
